@@ -9,14 +9,14 @@ from .models import Appointment
 
 
 class GetDeleteUpdateAppointments(RetrieveUpdateAPIView):
-    """ Get or update a record."""
+    """ Get or update a single appointment record."""
     queryset = Appointment.objects.all().order_by('datetime')
     serializer_class = AppointmentSerializer
     lookup_field = 'pk'
 
 
 class GetPostAppointments(ListCreateAPIView):
-    """ List a queryset or create a new record."""
+    """ List appointments or create a new one."""
     serializer_class = AppointmentSerializer
 
     def get_queryset(self, *args, **kwargs):
