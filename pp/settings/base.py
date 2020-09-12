@@ -15,7 +15,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -108,3 +107,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/{{ docs_version }}/howto/static-files/
 
 STATIC_URL = '/static/'
+
+REST_FRAMEWORK = {
+    'DATE_INPUT_FORMATS': ["%m-%d-%Y", ],
+    'DATETIME_FORMAT': "%m-%d-%Y - %H:%M",
+}
