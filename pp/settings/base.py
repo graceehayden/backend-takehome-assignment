@@ -110,6 +110,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 REST_FRAMEWORK = {
-    'DATE_INPUT_FORMATS': ["%m-%d-%Y", ],
+    'DATE_INPUT_FORMATS': ["%m-%d-%Y"],
     'DATETIME_FORMAT': "%m-%d-%Y - %H:%M",
 }

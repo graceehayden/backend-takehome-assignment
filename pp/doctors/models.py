@@ -2,6 +2,8 @@ from django.db import models
 
 
 class Doctor(models.Model):
+    booked_appointments = models.ManyToManyField('appointments.Appointment', related_name='doctors', blank=True)
+
     RATINGS = [('1', '1'), ('2','2'), ('3','3'), ('4','4'), ('5','5')]
     SPECIALIZATIONS = [
         ('', ''),
